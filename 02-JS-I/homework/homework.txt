@@ -1,0 +1,10 @@
+1. *Variables : Las variables son un espacio de memoria asignado por la computadora (dependiendo el tipo de variable), son definidas por
+el desarrollador y se les pueden dar valores.
+*Strings : Las strings son cadenas de carácteres las cuales representan texto, del tamaño que nosotros queramos.
+*Funciones : los argumentos son todo aquello que no sea sentencias, los argumentos tienen un valor y las sentencias son cosas que dependen 
+de argumentos para ver qué hacer. la función return retorna un argumento de una función.
+*Declaraciones if : las Declaraciones son la creación de variables hechas por el usuario, es el momento en el que se le define un nombre y
+su valor. 
+*Booleanos :Los booleanos son un tipo de variable el cual tiene solo dos tipos de valor, "true" y "false", "1" o "0", se utiliza para determinar
+decisiones principalmente.
+
