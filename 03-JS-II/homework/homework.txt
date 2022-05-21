@@ -1,0 +1,5 @@
+1. *for : El for es un bucle que se repite hasta que la condición de control se cumpla, generalmente se utiliza para repetir una X cantidad de veces
+&&, || y ! : son condicionales para determinar si un argumento es verdader o falso, && es "AND" o "y" en español, se utiliza cuando se necesita que dos
+argumentos sean true, es decir, para que el argumento condicionado por && sea true, se tiene que cumplir A y B. 
+|| Es el condicionante de "OR", u "o" en español, se utiliza para determinar cuando un argumento u otro sea verdadero, es decir, A o B.
+! es el condicionante "NOT" o "negado", básicamente niega el argumento, si el argumento es "true", lo cambia a "false", y si es "false", lo cambia a "true".
