@@ -1,0 +1,5 @@
+*Arrays : Los arrays (arreglos) son una matriz de variables la cual podemos definir con [] y darle los valores separados con ','.
+el control de los arrays se basa en la "posición" del mismo, empezando por 0. Para saber cuán largo es un array podemos utilizar la función
+.length al igual que en la función de strings. Ej: array.length -> devuelve el largo del array.
+para poner o sacar valores en un array ya definido, podemos utilizar las funciones .push(valor) o .pop, (estas actuan sobre el último valor del array)
+de la misma forma .shift o .unshift(valor) sirven para la primer posición.
