@@ -1,0 +1,19 @@
+* Objetos (propiedades y metodos) : Los objetos son contenedores de datos asi al igual que los arreglos, pero con sus diferencias, los arreglos pueden contener información
+de muchas cosas, pero los objetos son información mas especifica y relacionada con el objeto como tal. El objeto se crea usando {}
+y tiene la característica de tener "claves" con "valores", esas "claves" se utilizaran luego para obtener su valor o en su defecto, darle uno.
+las claves se definen una vez creado el objeto y se les puede dar valor o no, estas "claves" son las variables / funciones / arrays / objetos / etc 
+que pueda contener nuestro objeto. Para acceder a ellos, se debe hacer mediante un . como anteriormente lo hicimos ,ejemplo
+objeto.nombre -> devuelve el valor de la clave nombre del objeto. Las claves que sean variables son propiedades, y las claves que sean funciones son Métodos.
+* Bucle for... in : El bucle for in sirve para iterar por todo el rango de un objeto. Con el rango me refiero a recorrer todas las claves de un objeto.
+ejemplo: for (let clave in objeto){
+    console.log(clave);
+}
+va a mostrar el valor de cada clave dentro del objeto.
+*Notacion de punto vs notacion de corchetes: para acceder a los array y poder obtener sus valores vimos que se usan con [], y en los objetos vimos
+que se utiliza el . para referirnos a su clave, la notación de corchetes se refiere a una posición si le ponemos un valor numerico.
+En los objetos, se puede utilizar los corchetes de la misma manera, de formato de posición, o si no, utilizando un string utilizando el nombre de la clave.
+de la misma manera, se utiliza el . para en vez de una string buscar directamente el nombre de la clave.
+ejemplo:
+
+objeto.clave
+objeto['nombreDeClave'];
