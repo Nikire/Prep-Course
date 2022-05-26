@@ -1,0 +1,35 @@
+* `prototype` : El objeto prototype sirve para guardar todos los métodos de cada clase creada, para hacer eficiente el uso de memoria. 
+Por ejemplo, para poder crear un método en una clase tenemos que acceder vía el prototype.
+Clase.prototype.metodo= function(){
+    ...
+}
+
+* _Constructors_ (de Clases) : Una funcion constructor sirve para crear una clase, asignarle sus propiedades y luego asignarles métodos.
+Hay veces en las que las propiedades de clases se repiten, por ejemplo, antes de ser un trabajador, se es una persona, y el nombre,apellido,años,etc
+de esa persona es la misma que la del trabajador. Para pasar todo estas propiedades, se puede utilizar un Clase.call(), donde su sintáxis es de (objeto o this,prop1,prop2,propn)
+ejemplo:
+
+function Persona(nombre,apellido,anios){
+    this.nombre=nombre;
+    this.apellido=apellido;
+    this.anios=anios;
+}
+
+Persona.prototype.saludar=function(){
+    console.log('Hola soy'+ this.nombre + 'un gusto.');
+}
+
+function Trabajador(nombre,apellido,anios,puesto){
+    Persona.call(this,nombre,apellido,anios);
+    this.puesto=puesto;
+}
+
+var Franco=new Trabajador('Franco','Gutierrez',20,'Albañil')
+
+NOTA: solo se pasan las propiedades de la clase, para pasar también los métodos se debe crear un objeto que almacene los métodos del prototype de las clases.
+
+ejemplo:Franco.saludar() -> no funciona.
+
+Trabajador.prototype = Object.create(Persona.prototype); // de esta manera guardamos en el prototype del trabajador, todos los métodos de la clase persona.
+Trabajador.prototype.constructor = Trabajador //esto es necesario debido a que tenemos que hacer referencia nuevamente al constructor para que las funciones como (call) funcionen.
+                                              //ya que ahora mismo hace referencia a Persona,por haberlo sobreescrito.
