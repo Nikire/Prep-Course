@@ -1,0 +1,45 @@
+* Funciones Callback : Las funciones callback son aquellas que pueden ser pasadas por argumento en otra función.
+Se pueden utilizar principalmente para darle una acción a una variable / objeto que tengamos, ejemplo
+
+function saludarHola(usuario){
+    return 'hola ' +usuario;
+}
+function saludarAdios(usuario){
+    return 'adios '+usuario;
+}
+function crearSaludo(usuario,cb){//Donde cb es nuestra función callback pasada por parametro.
+    return cb(usuario);
+}
+
+crearSaludo('Erik',saludarHola);          // hola Erik
+crearSaludo('Erik',saludarAdios);         // adios Erik
+
+teniento este concepto,podemos trabajar sobre más métodos donde se necesita pasar una función por parámetro.
+en los array existen los métodos .forEach .reduce y .map donde se necesita una función por parámetro para indicar qué hacer.
+
+Aclaracion: cb en todo momento puede ser definida como una función anonima, sin tener que estar definida.
+
+en .forEach(cb,arranque), se itera un ciclo "for" con pasando por todos los elementos del array. en la función "cb" se le debe indicar qué hacer con cada elemento.
+la función cb debe pasar los parámetros (elemento,indice), (indice no es necesario). El parámetro arranque no es necesario,pero indica desde dónde debe comenzar el ciclo,por defecto empieza desde el inicio.
+este es un ejemplo de una función anónima como cb:
+
+autos.forEach(function (elemento, indice) {
+  console.log(elemento);
+}); //siendo autos un array.
+
+.reduce recorre todo el array, devuelve el valor del indice indicado y lo quita del array. también tiene un segundo parámetro opcional, que es el acumulador de arranque,al igual que en .forEach
+define desde donde empezar a recorrer el array.
+ejemplo:
+
+const suma = numeros.reduce(function (acc, elemento) {
+  return acc + elemento;
+});
+//(suma todos los valores del array)
+
+Finalmente .map recorre todos los elementos del array y modifica a todos los elementos por igual, por ejemplo si tenemos un array de números y queremos que todos los numeros se
+multipliquen por dos, podemos utilizar:
+
+const doble = numeros.map(function (elemento) {
+  return elemento * 2;
+}); //devuelve el array con todos los elementos multiplicados por 2.
+
